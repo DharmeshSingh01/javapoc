@@ -1,0 +1,31 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer  
+          
+spring.datasource:
+  # url: jdbc:mysql://mysql123.mysql.database.azure.com:3306/studentdb?useUnicode=true&useJDBCCompliantTimezone 
+   url: jdbc:mysql://maria-db-poc.mariadb.database.azure.com:3306/studentdb?useUnicode=true&useJDBCCompliantTimezone
+   username: mariadbpoc@maria-db-poc
+   password: ${database-password}
+      
+spring.cloud.azure:
+  credential:
+    client-id: 50acd962-d938-462f-a53f-66b14f2a15d5
+    client-secret: 2mT8Q~FcrKXIyvFQCC4OkdfxtRkV5gdyJKKbFa-S
+  profile:
+    tenant-id: 93795427-ffbe-4db3-a023-dc4cc9aba561
+
+spring.cloud:
+    azure:
+      compatibility-verifier:
+        enabled: false
+      keyvault:
+        secret:
+          property-sources[0]:
+            name: key-vault-property-source-1
+            endpoint: https://javapockeyvault1.vault.azure.net/
+          property-source-enabled: true
+              
