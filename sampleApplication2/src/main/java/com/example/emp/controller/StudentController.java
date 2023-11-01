@@ -37,7 +37,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.web.bind.annotation.RestController;
-import com.azure.storage.file.share.*;
+//import com.azure.storage.file.share.*;
 
 @Controller
 
@@ -188,7 +188,7 @@ public class StudentController {
          return message;
         }*/
     
-     public static String connectStr="DefaultEndpointsProtocol=https;AccountName=javapoclogsa;AccountKey=VvPymLdbrV2YeTbppjWBnyVGppFJpt/ubTnKmpeb3I30vMXYiXMYJfN6VMDkAQVZ460+6DF70yc0+AStG1HQuQ==;EndpointSuffix=core.windows.net";
+     /*public static String connectStr="DefaultEndpointsProtocol=https;AccountName=javapoclogsa;AccountKey=VvPymLdbrV2YeTbppjWBnyVGppFJpt/ubTnKmpeb3I30vMXYiXMYJfN6VMDkAQVZ460+6DF70yc0+AStG1HQuQ==;EndpointSuffix=core.windows.net";
         
      javapoclogsa
      public static Boolean createFileShare(String connectStr, String shareName)
@@ -207,7 +207,7 @@ public class StudentController {
                 System.out.println("createFileShare exception: " + e.getMessage());
                 return false;
             }
-        }
+        }*/
     
   	}
 
